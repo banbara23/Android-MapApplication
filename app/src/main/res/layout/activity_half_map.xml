@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content">
+
+
+		<ImageView
+			android:src="@drawable/sozai"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:text="地図をタップすると画面遷移する"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+	</FrameLayout>
+
+	<FrameLayout
+		android:id="@+id/map_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+		          xmlns:tools="http://schemas.android.com/tools"
+		          android:layout_width="match_parent"
+		          android:layout_height="100dp"
+		          android:id="@+id/map"
+		          tools:context="com.example.ikemura.android_mapapplication.HalfMapActivity"
+		          android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+		<View
+			android:id="@+id/alpha_view2"
+			android:layout_width="wrap_content"
+			android:layout_height="200dp"
+			android:alpha="150"
+			android:background="#10FFFFFF"/>
+	</FrameLayout>
+</LinearLayout>
